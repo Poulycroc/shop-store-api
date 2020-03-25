@@ -1,9 +1,17 @@
 # Coro19
 
 ## Build app
+
+#### base build
 ```bash
-$ make build
+$ make init-build
 ```
+
+#### Set databses and migrations
+```bash
+$ make init-build
+```
+
 
 ## Serve app
 ```bash

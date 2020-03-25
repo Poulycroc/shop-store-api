@@ -2,29 +2,39 @@ serve:
 	php -S localhost:8000 -t public
 
 update:
-	composer clear-cache
-	composer update
+	@composer.phar clear-cache
+	@composer.phar update
 
-autload:
-	composer dump-autload
+autoload:
+	@composer.phar dump-autoload
 
 migrate:
 	php artisan migrate
+seed:
+	php artisan db:seed
+
+init-database:
+	make migrate
+	make autoload
+	make seed
 
 clear:
-	composer clear-cache
-	composer dump-autoload -o
+	@composer.phar clear-cache
+	@composer.phar dump-autoload -o
 
-build: 
+init-build: 
 	touch database/database.sqlite
 	make install
+	make init-database
 
 clear-install:
 	rm -rf vendor
 	rm -rf node_modules
 	make clear
 	make install
+	php artisan migrate:refresh --seed
+	make seed
 
 install:
 	npm i
-	composer install
+	@composer.phar install

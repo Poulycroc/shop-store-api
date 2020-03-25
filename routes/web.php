@@ -12,3 +12,4 @@
 */
 
 $router->get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
+$router->get('/users', ['as' => 'users', 'uses' => 'UsersController@index']);
