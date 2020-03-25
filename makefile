@@ -15,5 +15,9 @@ clear:
 	composer clear-cache
 	composer dump-autoload -o
 
+build: 
+	touch database/database.sqlite
+	make install
+
 install:
 	composer install
