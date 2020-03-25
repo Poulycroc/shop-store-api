@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class PageController extends Controller
+class PagesController extends Controller
 {
     /**
      * Create a new controller instance.
