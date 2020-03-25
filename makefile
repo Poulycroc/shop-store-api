@@ -1,5 +1,10 @@
+dev:
+	make -j 2 serve watch
+
 serve:
 	php -S localhost:8000 -t public
+watch:
+	npm run watch
 
 update:
 	@composer.phar clear-cache
