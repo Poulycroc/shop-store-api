@@ -19,5 +19,12 @@ build:
 	touch database/database.sqlite
 	make install
 
+clear-install:
+	rm -rf vendor
+	rm -rf node_modules
+	make clear
+	make install
+
 install:
+	npm i
 	composer install

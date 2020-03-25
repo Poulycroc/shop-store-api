@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "~sass-tools/tools/mixins";
+@import "~sass-tools/tools/media-queries";
+@import "~sass-tools/tools/rfs";
+@import "~sass-tools/tools/functions";
+
+/**
+ * PAGES
+ */
+@import "./components/buttons";
+
+/**
+ * PAGES
+ */
+@import "./pages/home";
