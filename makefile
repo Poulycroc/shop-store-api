@@ -8,5 +8,12 @@ update:
 autload:
 	composer dump-autload
 
+migrate:
+	php artisan migrate
+
+clear:
+	composer clear-cache
+	composer dump-autoload -o
+
 install:
 	composer install
