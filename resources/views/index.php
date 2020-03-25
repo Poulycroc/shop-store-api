@@ -6,6 +6,6 @@
   <title><?= $pageName; ?></title>
 </head>
 <body>
-  <h1>Hello, <?= $pageName; ?></h1>  
+  <h1>Hello, <?= $pageName; ?></h1>
 </body>
 </html>
