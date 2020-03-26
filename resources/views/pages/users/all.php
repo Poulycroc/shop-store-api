@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $pageName; ?></title>
+  <title>Users page</title>
   <link rel="stylesheet" type="text/css" href="<?= url('css/app.css') ?>">
 </head>
 <body>
-<?php require __DIR__.'/includes/nav.php'; ?>
   <div id="app">
-    <h1>Hello, <?= $pageName; ?></h1>
-    <example-component></example-component>
+    <?php foreach ($users as $user): ?>
+      <?= $user; ?>
+    <?php endforeach; ?>
   </div>
   <script type="text/javascript" src="<?= url('js/app.js') ?>"></script>
-<?php require __DIR__.'/includes/footer.php'; ?>
 </body>
 </html>
