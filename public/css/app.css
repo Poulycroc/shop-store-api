@@ -10907,3 +10907,57 @@ a.text-dark:focus {
  * PAGES
  */
 
+.product {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.list-group.list-group-flush {
+  text-align: right;
+}
+
+/**
+ * INCLUDES
+ */
+
+nav img {
+  width: 125px;
+}
+
+nav .container ul.navbar-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav .container ul.navbar-nav li {
+  margin-right: 35px;
+}
+
+nav .container ul.navbar-nav .btn-outline-success {
+  display: flex;
+  align-items: center;
+  height: 38px !important;
+}
+
+nav .container ul.navbar-nav .btn-outline-success {
+  color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+nav .container ul.navbar-nav .btn-outline-success:hover {
+  color: #f8f9fa !important;
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 25px 0px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer div {
+  text-align: center;
+}
+

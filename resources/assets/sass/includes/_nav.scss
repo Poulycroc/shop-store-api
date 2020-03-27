@@ -1,0 +1,29 @@
+nav{
+    img{
+        width: 125px;
+    }
+    .container ul.navbar-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        li{
+            margin-right: 35px;
+        }
+        .btn-outline-success{
+            display: flex;
+            align-items: center;
+            height: 38px!important;
+        }
+        .btn-outline-success{
+            color: #1E90FF;
+            border-color: #1E90FF;
+        }
+        .btn-outline-success:hover{
+            color: #f8f9fa !important;
+            background-color: #1E90FF;
+            border-color: #1E90FF;
+        }
+    }
+
+}

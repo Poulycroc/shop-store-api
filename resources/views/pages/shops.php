@@ -8,28 +8,45 @@
   <link rel="stylesheet" type="text/css" href="<?= url('css/app.css') ?>">
 </head>
 <body>
-<?php require __DIR__.'/../includes/nav.php'; ?>
-  <div id="app" class="container">
-      <h1>Ceci est la page boutique nomée : <?= $shopName ?></h1>
+  <div id="app" >
+      <?php require __DIR__.'/../includes/nav.php'; ?>
+      <div class="container">
+          <h1><?= $shopName ?></h1>
+          <section id="products" class="row">
+              <?php
+                  foreach ($products as $product){
+              ?>
+                    <div class="product col-12 col-sm-6 col-md-4 col-lg-3">
+                      <b-card
+                          no-body
+                          style="max-width: 18rem;margin: 0px;padding-left: 0px;padding-right: 0px"
+                          img-src="<?= $product['image']?>"
+                          img-alt="<?= $product['name']?>"
+                          img-top
+                      >
+                          <b-card-body>
+                              <b-card-title><?= $product['name']?></b-card-title>
+                              <b-card-sub-title class="mb-2"><?= $product['ref']?></b-card-sub-title>
+                              <b-card-text>
+                                  <?= $product['description']?>
+                              </b-card-text>
+                          </b-card-body>
 
-      <h2>Produits</h2>
-      <section id="products" class="row">
-          <?php
-              foreach ($products as $product){
-          ?>
-                <div class="product col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="product/<?= $product['ref']?>" title="<?= $product['name']?>">
-                        <h3><?= $product['name']?></h3>
-                        <img style="width: 100%;" src="<?= $product['image']?>" alt="<?= $product['name']?>">
-                        <p><?= $product['description']?></p>
-                        <p><?= $product['price']?></p>
-                        <sub><?= $product['ref']?></sub>
-                    </a>
-                </div>
-          <?php
-          }
-          ?>
-      </section>
+                          <b-list-group flush>
+                              <b-list-group-item><?= $product['price']?></b-list-group-item>
+                          </b-list-group>
+
+                          <b-card-body>
+                              <a href="product/<?= $product['ref']?>" class="card-link">Détails</a>
+                              <a href="#" class="card-link">ajouter au panier</a>
+                          </b-card-body>
+                      </b-card>
+                    </div>
+              <?php
+              }
+              ?>
+          </section>
+      </div>
   </div>
   <script type="text/javascript" src="<?= url('js/app.js') ?>"></script>
 <?php require __DIR__.'/../includes/footer.php'; ?>
