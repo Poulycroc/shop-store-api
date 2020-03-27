@@ -19,7 +19,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var string
      */
     protected $table = 'users';
-    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -81,12 +81,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         }
     }
 
-    public function isSuperUser() {
+    public function isAdmin() {
         return (bool)$this->is_admin;
     }
 
     public function hasAccess($permissions, $all = true) {
-        if ($this->isSuperUser()) {
+        if ($this->isAdmin()) {
             return true;
         }
         return $this->hasPermission($permissions, $all);
