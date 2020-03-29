@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('title', 255);
             $table->float('price', 8, 2);
             $table->longText('description');
+            $table->boolean('stock')->default(1); // true
             
             $table->integer('category_id')
                   ->unsigned();

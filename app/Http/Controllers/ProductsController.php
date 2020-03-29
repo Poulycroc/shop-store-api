@@ -30,4 +30,19 @@ class ProductsController extends Controller
         ];
             return view('pages/product', $data);
     }
+
+    public function store(Request $request)
+    {
+        //Populate model
+        $product = new Product($request->except(['image']));
+        
+        $product->save();
+
+        //Store Image
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            $product->addMediaFromRequest('image')->toMediaCollection('images');
+        }
+
+        return redirect("/products/{$product->id}")->with('success', 'New Gift Added !');
+    }
 }
