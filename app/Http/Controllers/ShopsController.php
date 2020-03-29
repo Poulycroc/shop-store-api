@@ -17,26 +17,32 @@ class ShopsController extends Controller
             'shopLogo' => 'https://www.stickpng.com/assets/images/58406746657b0e0e08612e45.png',
             'products' => [
                 [
-                    'name'        => 'Name1',
-                    'price'       => 'price1',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
+                    'name'        => 'CaraPils Can. 33Cl',
+                    'price'       => '12,99 €',
+                    'image1'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
+                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.<br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.',
                     'stock'       => true,
                     'ref'         => 'PRD1111'
                 ],
                 [
                     'name'        => 'Name2',
-                    'price'       => 'price2',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
+                    'price'       => '42,99 €',
+                    'image1'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
+                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.<br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.',
                     'stock'       => true,
                     'ref'         => 'PRD2222'
                 ],
                 [
                     'name'        => 'Name3',
-                    'price'       => 'price3',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
+                    'price'       => '2,45 €',
+                    'image1'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
+                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.<br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.',
                     'stock'       => true,
                     'ref'         => 'PRD3333'
                 ],
