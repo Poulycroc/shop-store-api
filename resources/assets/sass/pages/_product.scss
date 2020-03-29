@@ -1,7 +1,27 @@
-.product {
-    padding: 5px;
-    margin-bottom: 5px;
+.slider{
+    padding: 15px 0px!important;
+    max-height: 350px;
+    .carousel-no-animation{
+        height: 90%;
+    }
+    .carousel-item.active{
+        height: 350px;
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+    }
+    ol.carousel-indicators{
+        bottom: -50px;
+        li{
+            background-color: blue!important;
+        }
+    }
+
+    ol .carousel-indicators .active{
+        background-color: #000!important;
+    }
 }
-.list-group.list-group-flush{
-    text-align: right;
+
+.btnReturn, .btnCart{
+    margin-top: 65px;
 }

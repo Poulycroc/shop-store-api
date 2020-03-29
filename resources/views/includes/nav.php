@@ -1,7 +1,7 @@
 <b-navbar type="light" variant="light">
     <div class="container">
         <b-navbar-nav>
-            <b-nav-item href="#">
+            <b-nav-item href="/shops/<?= $shopName; ?>">
                 <img src="<?= $shopLogo; ?>">
             </b-nav-item>
 
@@ -14,7 +14,7 @@
                 <b-dropdown-item href="#">Chips</b-dropdown-item>
             </b-nav-item-dropdown>
 
-            <b-nav-item href="#">Panier</b-nav-item>
+            <b-nav-item href="/cart/<?= $shopName; ?>">Panier</b-nav-item>
 
             <b-nav-form>
                 <b-form-input class="mr-sm-2" placeholder="Search"></b-form-input>

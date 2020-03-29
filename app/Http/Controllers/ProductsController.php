@@ -2,48 +2,32 @@
 
 namespace App\Http\Controllers;
 
-class ShopsController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function index($id)
+    public function index($id, $ref)
     {
-
         $data = [
             'shopName' => $id,
             'shopLogo' => 'https://www.stickpng.com/assets/images/58406746657b0e0e08612e45.png',
-            'products' => [
+            'product' =>
                 [
-                    'name'        => 'Name1',
-                    'price'       => 'price1',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
+                    'name'        => 'CaraPils Can. 33Cl',
+                    'price'       => '12,99€',
+                    'image1'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
+                    'image2'       => 'https://t2.ldh.be/96GsfY9oqZfqQ_ewvGNCaVAx1zc=/0x161:4000x2161/940x470/5b571b4d5532692548451081.jpg',
+                    'image3'       => 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Carapils.jpg',
+                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.<br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus dignissimos dolores et facere illum, minus natus nesciunt omnis placeat praesentium quidem vel vitae. Harum iure molestiae officiis praesentium veritatis.',
                     'stock'       => true,
-                    'ref'         => 'PRD1111'
-                ],
-                [
-                    'name'        => 'Name2',
-                    'price'       => 'price2',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
-                    'stock'       => true,
-                    'ref'         => 'PRD2222'
-                ],
-                [
-                    'name'        => 'Name3',
-                    'price'       => 'price3',
-                    'image'       => 'https://www.mangebelge.com/10961-large_default/cara-pils-44-33cl.jpg',
-                    'description' => 'CARA pils en canette de 33cl est une bière blonde type pils',
-                    'stock'       => true,
-                    'ref'         => 'PRD3333'
-                ],
-            ]
+                    'ref'         => $ref
+                ]
         ];
-        if(!is_null($id)) {
-            return view('pages/shops', $data);
-        }
+            return view('pages/product', $data);
     }
 }
