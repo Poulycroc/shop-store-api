@@ -9,6 +9,7 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
 use App\Models\Role;
+use App\Models\Shop;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -47,6 +48,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
     public function roles() {
         return $this->belongsToMany(Role::class, 'role_users', 'user_id', 'role_id');
+    }
+
+    public function shop() {
+        return $this->belongsToMany(Shop::class, 'ownered_shop');
     }
 
     public function attachRole($role) {

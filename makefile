@@ -44,6 +44,9 @@ clear-db:
 	echo "" > database/database.sqlite
 	php artisan migrate:refresh --seed
 
+migration:
+	php artisan make:migration create_$(name)_table
+
 install:
 	npm i
 	@composer.phar install
