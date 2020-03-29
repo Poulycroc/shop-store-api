@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Spatie\MediaLibrary\Models\Media;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
@@ -32,7 +33,7 @@ class Product extends Model implements HasMedia {
     public function categories() {
         return $this->belongsToMany(Category::class, 'categorized_product');
     }
-
+    
     public function scopeCategorized($query, Category $category=null) 
     {
       if ( is_null($category) ) return $query->with('categories');

@@ -16,13 +16,15 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title', 255);
+            $table->string('name', 255);
+            $table->string('ref', 60);
             $table->float('price', 8, 2);
             $table->longText('description');
             $table->boolean('stock')->default(1); // true
             
             $table->integer('category_id')
-                  ->unsigned();
+                  ->unsigned()
+                  ->nullable();
 
             $table->foreign('category_id')
                   ->references('id')

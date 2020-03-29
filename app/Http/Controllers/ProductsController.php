@@ -16,7 +16,7 @@ class ProductsController extends Controller
         $data = [
             'shopName' => $id,
             'shopLogo' => 'https://www.stickpng.com/assets/images/58406746657b0e0e08612e45.png',
-            'product' => Product::all()
+            'product' => Product::where('ref', $ref)->first()
         ];
         return view('pages/product', $data);
     }

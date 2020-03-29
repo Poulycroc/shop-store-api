@@ -2,10 +2,12 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+
+use App\Models\User;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,15 @@ $factory->define(User::class, function (Faker $faker) {
         'password' => $password ?: $password = Hash::make('secret'),
         'remember_token' => Str::random(10)
     ];
+});
+
+$factory->define(Product::class, function (Faker $faker) {
+
+    return [
+        'name'        => $faker->unique()->word,
+        'price'       => '12,99 €',
+        'description' => $faker->unique()->text,
+        'ref'         => Str::random(4)
+    ];
+
 });

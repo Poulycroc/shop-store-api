@@ -40,6 +40,10 @@ clear-install:
 	php artisan migrate:refresh --seed
 	make seed
 
+clear-db:
+	echo "" > database/database.sqlite
+	php artisan migrate:refresh --seed
+
 install:
 	npm i
 	@composer.phar install
