@@ -4,10 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Spatie\MediaLibrary\Models\Media;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+
 use App\Models\Order;
 use App\Models\Category;
 
-class Product extends Model {
+class Product extends Model implements HasMedia {
+    use HasMediaTrait;
+    protected $guarded = [];
+
     /**
      * The database table used by the model.
      *
@@ -37,5 +44,21 @@ class Product extends Model {
 
       return $query->with('categories')
                    ->where('category_id', $categoryIds);
+    }
+
+    /**
+     * https://www.5balloons.info/image-upload-resize-retrieve-laravel-medialibrary-spatie-package/
+     */
+    public function registerMediaConversions(Media $media = null)
+    {
+        $this->addMediaConversion('thumb')
+              ->width(200)
+              ->height(200)
+              ->sharpen(10);
+
+        $this->addMediaConversion('square')
+              ->width(412)
+              ->height(412)
+              ->sharpen(10);
     }
 }
