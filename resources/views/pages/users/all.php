@@ -10,7 +10,7 @@
 <body>
   <div id="app">
     <?php foreach ($users as $user): ?>
-      <?= $user; ?>
+      <?= $user ?>
     <?php endforeach; ?>
   </div>
   <script type="text/javascript" src="<?= url('js/app.js') ?>"></script>
