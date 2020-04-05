@@ -1,4 +1,9 @@
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
+
+@import "./vendor/argon/nucleo/css/nucleo.css";
+@import "./vendor/argon/font-awesome/css/font-awesome.css";
+// @import "./vendor/argon/index.scss";
+@import "./vendor/argon/index.scss";
 
 @import "~sass-tools/tools/mixins";
 @import "~sass-tools/tools/media-queries";
