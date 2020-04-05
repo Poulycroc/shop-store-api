@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Shop;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,25 @@ $factory->define(Product::class, function (Faker $faker) {
         'price'       => '12,99 €',
         'description' => $faker->unique()->text,
         'ref'         => Str::random(4)
+    ];
+
+});
+
+$factory->define(Product::class, function (Faker $faker) {
+
+    return [
+        'name'        => $faker->unique()->word,
+        'price'       => '12,99 €',
+        'description' => $faker->unique()->text,
+        'ref'         => Str::random(4)
+    ];
+
+});
+
+$factory->define(Shop::class, function (Faker $faker) {
+
+    return [
+        'name'        => $faker->unique()->word
     ];
 
 });
