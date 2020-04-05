@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -18,7 +18,7 @@ class Shop extends Model {
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name','description','logo','url'];
 
     /**
      * Many-to-Many relations with User.

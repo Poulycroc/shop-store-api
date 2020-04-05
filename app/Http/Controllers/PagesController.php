@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Shop;
+
 class PagesController extends Controller
 {
     /**
@@ -12,7 +14,9 @@ class PagesController extends Controller
     public function home()
     {
       $data = [
-        'pageName' => 'Coronashop19.be'
+        'pageName' => 'Coronashop19.be',
+        'shopName' => '*',
+        'allShops' => Shop::all()
       ];
       return view('index', $data);
     }

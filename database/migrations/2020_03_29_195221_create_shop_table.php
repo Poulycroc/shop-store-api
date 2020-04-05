@@ -18,6 +18,12 @@ class CreateShopTable extends Migration
 
             $table->string('name');
 
+            $table->string('description');
+
+            $table->string('logo');
+
+            $table->string('url');
+
             $table->timestamps();
         });
     }

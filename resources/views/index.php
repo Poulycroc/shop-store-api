@@ -8,12 +8,17 @@
   <link rel="stylesheet" type="text/css" href="<?= url('css/app.css') ?>">
 </head>
 <body>
-<?php require __DIR__.'/includes/nav.php'; ?>
+
   <div id="app">
     <h1>Hello, <?= $pageName; ?></h1>
-    <example-component></example-component>
+      <?php
+      foreach ($allShops as $shop) {
+        echo $shop;
+      }
+      ?>
+      <example-component></example-component>
   </div>
   <script type="text/javascript" src="<?= url('js/app.js') ?>"></script>
-<?php require __DIR__.'/includes/footer.php'; ?>
+
 </body>
 </html>
