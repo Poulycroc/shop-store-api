@@ -1,22 +1,29 @@
 <b-navbar type="light" variant="light">
     <div class="container">
         <b-navbar-nav>
-            <b-nav-item href="/shops/<?= $shopName; ?>">
-                <img src="<?= $shopLogo; ?>">
+            <b-nav-item href="/<?php if(isset($shop_id)){echo$shop_id;} ?>">
+                <img src="<?php if(isset($shop_id)){$shopLogo;}else{echo'';} ?>">
             </b-nav-item>
 
             <!-- Navbar dropdowns -->
-            <b-nav-item-dropdown text="Catégories" left>
+<!--            <b-nav-item-dropdown text="Catégories" left>
                 <b-dropdown-item href="#">Bières</b-dropdown-item>
                 <b-dropdown-item href="#">Vins</b-dropdown-item>
                 <b-dropdown-item href="#">Soft</b-dropdown-item>
                 <hr>
                 <b-dropdown-item href="#">Chips</b-dropdown-item>
-            </b-nav-item-dropdown>
+            </b-nav-item-dropdown>-->
+            <b-nav-item href="/<?php if(isset($shop_id)){echo$shop_id;} ?>">Home</b-nav-item>
 
-            <b-nav-item href="/cart/<?= $shopName; ?>">Panier</b-nav-item>
+            <?php
+                if(isset($shop_id)){
+            ?>
+                    <b-nav-item href="/cart/<?= $shop_id; ?>">Panier</b-nav-item>
+            <?php
+                }
+            ?>
 
-            <b-nav-form>
+<!--            <b-nav-form>
                 <b-form-input class="mr-sm-2" placeholder="Search"></b-form-input>
                 <b-button variant="outline-success" class="my-2 my-sm-0" type="submit">
                     <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +31,7 @@
                         <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
                     </svg>
                 </b-button>
-            </b-nav-form>
+            </b-nav-form>-->
         </b-navbar-nav>
     </div>
 </b-navbar>

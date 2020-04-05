@@ -19,5 +19,5 @@ Route::get('/account', ['as' => 'account', 'uses' => 'AccountController@index'])
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 Route::get('/{id}', ['as' => 'shop', 'uses' => 'ShopsController@index']);
-Route::get('/{id}/product/{ref}', ['as' => 'product', 'uses' => 'ProductsController@index']);
+Route::get('/{id}/product/{product_id}', ['as' => 'product', 'uses' => 'ProductsController@index']);
 Route::get('/{id}/cart', ['as' => 'cart', 'uses' => 'CartController@index']);

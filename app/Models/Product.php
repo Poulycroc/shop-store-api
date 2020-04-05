@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -10,6 +10,7 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 use App\Models\Order;
 use App\Models\Category;
+use App\Models\Shop;
 
 class Product extends Model implements HasMedia {
     use HasMediaTrait;
@@ -30,11 +31,15 @@ class Product extends Model implements HasMedia {
         return $this->belongsToMany(Order::class, 'ordered_product');
     }
 
+    public function shop(){
+        return $this->belongsTo(Shop::class);
+    }
+
     public function categories() {
         return $this->belongsToMany(Category::class, 'categorized_product');
     }
-    
-    public function scopeCategorized($query, Category $category=null) 
+
+    public function scopeCategorized($query, Category $category=null)
     {
       if ( is_null($category) ) return $query->with('categories');
 

@@ -33,7 +33,7 @@
                           </b-card-body>
 
                           <b-card-body style="justify-content: space-between;display: flex;">
-                              <b-button variant="primary" href="/shops/<?= $shopName; ?>/product/<?= $product['ref']?>">
+                              <b-button variant="primary" href="/<?= $shop_id; ?>/product/<?= $product['id']?>">
                                   Détails
                               </b-button>
                               <b-button variant="primary">

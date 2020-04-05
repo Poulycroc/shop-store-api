@@ -19057,6 +19057,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   text-align: right;
 }
 
+.card-text {
+  min-height: 75px;
+}
+
 .slider {
   padding: 15px 0px !important;
   max-height: 350px;
