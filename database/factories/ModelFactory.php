@@ -48,7 +48,9 @@ $factory->define(Product::class, function (Faker $faker) {
         'name'        => $faker->unique()->word,
         'price'       => '12,89 €',
         'description' => $faker->unique()->text,
-        'ref'         => Str::random(4)
+        'ref'         => Str::random(4),
+        'shop_id'     => 1,
+
     ];
 
 });

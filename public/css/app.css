@@ -10916,6 +10916,10 @@ a.text-dark:focus {
   text-align: right;
 }
 
+.card-text {
+  min-height: 75px;
+}
+
 .slider {
   padding: 15px 0px !important;
   max-height: 350px;

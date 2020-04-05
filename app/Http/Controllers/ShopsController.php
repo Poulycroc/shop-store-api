@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+/*use App\Models\Product;*/
+use App\Models\Shop;
 
 class ShopsController extends Controller
 {
@@ -13,15 +14,22 @@ class ShopsController extends Controller
      */
     public function index($id)
     {
+        if(!is_null(Shop::find($id))) {
 
-        $data = [
-            'shopName' => $id,
-            'shopLogo' => 'https://www.stickpng.com/assets/images/58406746657b0e0e08612e45.png',
-            'products' => Product::all()
-        ];
+            $data = [
+                'shop_id' => $id,
+                'shopName' => Shop::find($id)->name,
+                'shopLogo' => Shop::find($id)->logo,
+                'products' => Shop::find($id)->products()->get()
+            ];
 
-        if(!is_null($id)) {
             return view('pages/shops', $data);
+
+        } else {
+
+            return redirect('/');
+
         }
+
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\User;
+use App\Models\Product;
 
 class Shop extends Model {
     /**
@@ -29,4 +30,7 @@ class Shop extends Model {
         return $this->belongsToMany(User::class, 'ownered_shop');
     }
 
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
 }

@@ -14,7 +14,7 @@ class PagesController extends Controller
     public function home()
     {
       $data = [
-        'pageName' => 'Coronashop19.be',
+        'pageName' => 'Liste des magasins',
         'shopName' => '*',
         'allShops' => Shop::all()
       ];
